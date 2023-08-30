@@ -1,20 +1,25 @@
 # MixupE
-Codes for "MixupE: Understanding and Improving Mixup from Directional Derivative Perspective" UAI 2023 Best Student Paper
+Codes for "MixupE: Understanding and Improving Mixup from Directional Derivative Perspective" 
+
+UAI 2023 Best Student Paper
 
 ## Dataset
 
 For CIFAR-10/100 and SVHN, these datasets can be downloaded automatically with torchvision.
 
-Download [Tiny-Imgane-Net](https://gist.github.com/moskomule/2e6a9a463f50447beca4e64ab4699ac4)
+Script for downloading [Tiny-Imgane-Net](https://gist.github.com/moskomule/2e6a9a463f50447beca4e64ab4699ac4).
 
 ## Environments
 Environment details used for our study.
-
-Python: 3.8.6
+```
+Python: 3.8.5
 PyTorch: 1.11.0+cu10.2
 Torchvision: 0.12.0+cu10.2
 CUDA: 10.2
-NumPy: 1.22.3
+NumPy: 1.22.3 
+scipy 1.5.2
+```
+
 
 ## Train with MixupE
 
@@ -31,6 +36,11 @@ python main.py --dataset cifar100 --data_dir ~/data/CIFAR100/ \
     --decay 0.0001 --mixupe_version 3 --mixup_eta 0.001 --learning_rate 0.1 --threshold 1.0 
 ```
 where the hyper-parameters in "--gammas" are "initial learning rate", "learning rate decay factors".
+
+<p align="center">
+    <img src="./figs/loss_acc.png" width="90%" />
+</p>
+
 
 ## Citation
 ```
